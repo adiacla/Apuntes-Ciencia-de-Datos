@@ -18,7 +18,41 @@
 * **Estructura de Datos:** Creación de tensores/arreglos NumPy, preparación de características/etiquetas y separación de datos de entrenamiento (80%) y validación (20%)[
 
 ---
+#  2 Redes Neuronales Densas (MLP) - Clasificación de Círculos Concéntricos
 
+Este repositorio contiene un cuaderno de Jupyter Notebook (`Cuaderno 4. Redes densas.ipynb`) desarrollado por **Alfredo Diaz**. El proyecto combina fundamentos teóricos sobre arquitecturas de redes neuronales profundas con una práctica guiada para resolver un problema de clasificación no linealmente separable utilizando **TensorFlow / Keras** y **scikit-learn**.
+
+-
+El cuaderno se divide en dos bloques principales: **Fundamentos Teóricos** y **Práctica Guiada**.
+
+### Fundamentos Teóricos
+
+#### 🔹 Funciones de Activación
+Explicación detallada, fórmulas matemáticas, rangos y usos recomendados para:
+* **ReLU (Rectified Linear Unit)**: Opción por defecto para capas ocultas.
+* **Sigmoid**: Ideal para capas de salida en clasificación binaria.
+* **Tanh (Tangente Hiperbólica)**: Recomendada para capas ocultas con datos centrados en cero.
+* **Linear (Identidad)**: Uso exclusivo en la capa de salida para problemas de regresión (*por defecto en Keras*).
+* **Softmax**: Salida para clasificación multiclase exclusiva.
+
+#### 🔹 Funciones de Pérdida (Loss Functions) y Métricas
+* **Regresión**: Mean Squared Error (MSE), Mean Absolute Error (MAE).
+* **Clasificación Binaria**: Binary Crossentropy ($\text{Sigmoid} + \text{Binary Crossentropy}$).
+* **Clasificación Multiclase**: Categorical Crossentropy (One-hot) y Sparse Categorical Crossentropy (Enteros).
+* **Diferencia clave**: La función de pérdida guía el aprendizaje (diferenciable); la métrica evalúa el rendimiento general.
+
+#### 🔹 Arquitectura y Entrenamiento
+* **Tamaño de Batch**: Concepto de Mini-batch Gradient Descent y tamaños recomendados (16, 32, 64, 128).
+* **Diseño de Capas Ocultas**: Recomendaciones sobre el número de neuronas y compresión progresiva de características.
+* **Partición de Datos**: Estrategias de división para Train, Validation y Test.
+* **Detección de Sobreajuste (Overfitting)**: Identificación de brechas entre `loss` y `val_loss`.
+* **Early Stopping**: Uso de callbacks en Keras (`patience`, `min_delta`, `restore_best_weights`).
+
+---
+
+###  Práctica: Clasificación de Círculos Concéntricos
+
+Un taller práctico de clasificación binaria no lineal utilizando el conjunto de datos sintético `make_circles` de `scikit-learn`.
 ##  Puntos Clave para el Examen
 
 Asegúrate de dominar los siguientes elementos presentes en el código:
@@ -33,7 +67,7 @@ Asegúrate de dominar los siguientes elementos presentes en el código:
 
 Al abrirlos cuaderno sde Jupyter (`.ipynb`), serás guiado a través celdas organizadas lógicamente
 
-Teoria y Practica 
+Teoría y Practica 
 
 inspección de resultados
 
